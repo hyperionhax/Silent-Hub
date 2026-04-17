@@ -9,7 +9,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hu
 
 # Where to buy?
 
-buy <a href="roblox.com/game-pass/1796333668">this gamepass</a> in order for Silent Hub to function.
+buy <a href="https://roblox.com/game-pass/1796333668">this gamepass</a> in order for Silent Hub to function.
 
 # Credits
 - <a href="https://discord.com/users/hyperionhax">hyperionhax</a> (UI Design and Functions)<br>
