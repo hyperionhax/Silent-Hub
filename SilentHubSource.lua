@@ -2726,7 +2726,7 @@ G2L["115"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json
 G2L["115"]["Size"] = UDim2.new(0, 457, 0, 22);
 G2L["115"]["Name"] = [[Goner]];
 G2L["115"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["115"]["Text"] = [[Goner]];
+G2L["115"]["Text"] = [[Goner (R6)]];
 G2L["115"]["Position"] = UDim2.new(0.43487, 0, 0.40833, 0);
 
 
