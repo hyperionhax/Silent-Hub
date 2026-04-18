@@ -1,4 +1,4 @@
-# Silent-Hub
+# Silent Hub
 
 <img src="SilentHub.png">
 
