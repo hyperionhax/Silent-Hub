@@ -1,17 +1,18 @@
 # Silent Hub
 
-<img src="SilentHub.png">
-
-our latest gui made for backdoored games for only 25 Robux.
+team c00lkidd revival's NEW Backdoor Scanner for Roblox!
 
 # Script
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hub/main/SilentHub.lua"))()
 ```
 
-# Where to buy?
-
-buy <a href="https://roblox.com/game-pass/1796333668">this gamepass</a> in order for Silent Hub to function.
+# Features
+- Quick remote scanner
+- Works on every backdoored game
+- Easy-to-use executor that supports several FD Scripts
+- Contains several Scripts for you to use in-game
+- Customizable GUI that saves!
 
 # Credits
 - <a href="https://discord.com/users/hyperionhax">hyperionhax</a> (UI Design and Functions)<br>
