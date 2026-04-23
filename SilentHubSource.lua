@@ -11,7 +11,7 @@
 local G2L = {};
 
 -- StarterGui.Silent Hub
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("CoreGui"));
+G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
 G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["DisplayOrder"] = 999999999;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
@@ -4310,7 +4310,6 @@ task.spawn(C_94);
 local function C_98()
 local script = G2L["98"];
 	local button = script.Parent
-	local Pages = button.Parent.Parent.Pages
 	
 	local InviteLink = "dsc.gg/teamc00lkidd"
 	
