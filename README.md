@@ -4,7 +4,7 @@ team c00lkidd revival's NEW Backdoor Scanner for Roblox!
 
 # Script
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hub/refs/heads/main/SilentHubSource.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hub/refs/heads/main/SilentHub"))()
 ```
 
 # Features
