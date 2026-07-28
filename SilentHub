@@ -16,7 +16,7 @@ $$\   $$ |$$ |$$ |$$   ____|$$ |  $$ | $$ |$$\       $$ |  $$ |$$ |  $$ |$$ |  $
      ]]
 
 local CoreGui = game:GetService("CoreGui")
-local gui = CoreGui:FindFirstChild("Silent Hub")
+local gui = CoreGui:FindFirstChild("SilentHub")
 
 if gui then
 game:GetService("StarterGui"):SetCore("SendNotification", {
