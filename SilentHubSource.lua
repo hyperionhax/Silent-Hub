@@ -41,7 +41,7 @@ G2L["3"]["Name"] = [[MainContainer]];
 
 -- StarterGui.SilentHub.UI.MainContainer.UIDrag
 G2L["4"] = Instance.new("LocalScript", G2L["3"]);
--- G2L["4"]["Capabilities"] = ;
+-- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["4"]["Sandboxed"] = true;
 G2L["4"]["Name"] = [[UIDrag]];
 
@@ -1676,15 +1676,6 @@ local script = G2L["2d"];
 	local value = button.Parent.Parent.Parent.Parent.Parent.Parent.Values.RemotePath
 	local input = button.Parent.Parent.EditorContainer.TextBoxContainer.TextBox
 	
-	local function getRemoteFromPath(path)
-		local remote = game
-		for segment in path:gmatch("[^.]+") do
-			remote = remote:FindFirstChild(segment)
-			if not remote then return nil end
-		end
-		return remote
-	end
-	
 	local function convert(code)
 		local name = LocalPlayer.Name
 	
@@ -1713,13 +1704,20 @@ local script = G2L["2d"];
 	
 	local function click()
 		local path = value.Value
+	
 		if not path or path == "" then
-			warn("No remote path acquired yet!")
+			warn("Silent Hub: No remote path acquired yet!")
 			return
 		end
 	
-		local remote = getRemoteFromPath(path)
-		if not remote then return end
+		local remote = game
+		for segment in path:gmatch("[^.]+") do
+			remote = remote[segment]
+		end
+	
+		if not remote then
+			return
+		end
 	
 		local text = convert(input.Text)
 	
@@ -2388,6 +2386,32 @@ local script = G2L["42"];
 		
 		{"Lighting Cannon [R6]", function(button)
 			execute('require(12750218971)("' .. player .. '")')
+		end},
+		
+		{"F3X Building Tools", function(button)
+			execute('require(4869378421).F3X("' .. player .. '")')
+		end},
+		
+		{"Star Time Glitcher [R6]", function(button)
+			execute('require(5480093885):StarGlitcherTime("' .. player .. '")')
+		end},
+		
+		{"Mr. Pixels [R6]", function(button)
+			execute('require(2995020929):Fire("oof", "' .. player .. '")')
+		end},
+		
+		{"The Sun is a Deadly Laser [R6]", function(button)
+			execute([[
+			require(4528360948):Fire(']] .. player .. [[', 'hack')
+			]])
+		end},
+		
+		{"The Obliterator [R6]", function(button)
+			execute('require(5407983416).c3("' .. player .. '")')
+		end},
+		
+		{"Void Slayer [R6]", function(button)
+			execute('require(8000740582).load("' .. player .. '")')
 		end}
 	}
 	
@@ -3068,6 +3092,10 @@ local script = G2L["83"];
 			):Play()
 		end
 	end)
+	
+	if rainbowenabled.Value == true then
+		task.spawn(rainbow)
+	end
 	
 	savebutton.MouseButton1Click:Connect(savesettings)
 	resetbutton.MouseButton1Click:Connect(resetsettings)
