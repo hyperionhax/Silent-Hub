@@ -19,9 +19,11 @@ local CoreGui = game:GetService("CoreGui")
 local gui = CoreGui:FindFirstChild("SilentHub")
 
 if gui then
-print("Reloading Silent Hub...")
-gui:Destroy()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hub/main/SilentHubSource.lua"))()
+game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Silent Hub",
+		Text = "Silent Hub is already loaded!",
+		Duration = 1.5,
+	})
 else
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hub/main/SilentHubSource.lua"))()
 end
