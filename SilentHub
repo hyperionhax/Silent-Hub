@@ -25,5 +25,9 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 		Duration = 1.5,
 	})
 else
+_G.SilentHub = {
+    Log = true
+}
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hub/main/SilentHubSource.lua"))()
 end
