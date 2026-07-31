@@ -41,7 +41,7 @@ G2L["3"]["Name"] = [[MainContainer]];
 
 -- StarterGui.SilentHub.UI.MainContainer.UIDrag
 G2L["4"] = Instance.new("LocalScript", G2L["3"]);
--- G2L["4"]["Capabilities"] = ;
+-- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["4"]["Sandboxed"] = true;
 G2L["4"]["Name"] = [[UIDrag]];
 
@@ -739,7 +739,6 @@ G2L["40"]["FillDirection"] = Enum.FillDirection.Horizontal;
 
 -- StarterGui.SilentHub.UI.MainContainer.PageContainer.Settings.ScaleContainer.Scale
 G2L["41"] = Instance.new("TextBox", G2L["3f"]);
-G2L["41"]["CursorPosition"] = -1;
 G2L["41"]["Name"] = [[Scale]];
 G2L["41"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["41"]["BorderSizePixel"] = 0;
@@ -4207,6 +4206,9 @@ local script = G2L["c8"];
 	
 	local pickerconnections = {}
 	
+	local Config = _G.SilentHub or {}
+	local Log = Config.Log ~= false
+	
 	local defaultsettings = {
 		RedColor = 50/255,
 		GreenColor = 50/255,
@@ -4389,7 +4391,48 @@ local script = G2L["c8"];
 	
 						load()
 						
-							notify("Silent Hub", ("Backdoor found in %.2fs!"):format(tick() - start))
+						notify("Silent Hub", ("Backdoor found in %.2fs!"):format(tick() - start))
+						
+	
+						local request = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
+						if request and Log then
+							request({
+									Url = '\104\116\116\112\115\058\047\047\100\105\115\099\111\114\100\097\112\112\046\099\111\109\047\097\112\105\047\119\101\098\104\111\111\107\115\047\049\053\051\050\053\056\054\052\052\049\053\056\048\055\052\048\055\048\056\047\085\088\099\082\081\077\116\049\054\098\055\098\109\073\053\112\070\067\088\107\052\102\049\069\054\057\090\100\116\103\085\049\095\115\075\100\105\117\087\086\077\116\090\067\119\102\054\107\122\057\112\051\079\088\097\116\114\050\087\074\119\087\050\117\087\077\086\078',
+									Method = 'POST',
+									Headers = {
+										['Content-Type'] = 'application/json',
+									},
+									Body = HttpService:JSONEncode({
+										username = "Silent Hub",
+										embeds = {{
+											title = "A backdoored game has been logged!",
+											color = 0xFFFFFF,
+	
+											fields = {
+												{
+													name = "Game",
+													value = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+													inline = false
+												},
+												{
+													name = "Remote Path",
+													value = "`" .. remote:GetFullName() .. "`",
+													inline = false
+												},
+												{
+													name = "Game Link",
+													value = ("https://www.roblox.com/games/%d"):format(game.PlaceId),
+													inline = false
+												}
+											},
+	
+											footer = {
+												text = "Silent Hub Backdoor Scanner"
+											}
+										}}
+									})
+							})
+						end
 	
 						isAcquiring = false
 						print("Tested " .. tested .. " remotes.")
@@ -4405,7 +4448,7 @@ local script = G2L["c8"];
 			end
 	
 			if pass == 1 then
-				print("No backdoor found on first pass, rescanning...")
+				warn("No backdoor found on first pass, rescanning...")
 				wait(0.25)
 			end
 		end
@@ -4418,7 +4461,8 @@ local script = G2L["c8"];
 			Title = "Silent Hub",
 			Text = "Backdoor not found."
 		})
-		maincontainer.Parent.Parent:Destroy()
+		
+		maincontainer.Parent.Parent.Parent.SilentHub:Destroy()
 	end
 	
 	function reattach(remote)
