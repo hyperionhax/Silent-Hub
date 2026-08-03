@@ -41,7 +41,7 @@ G2L["3"]["Name"] = [[MainContainer]];
 
 -- StarterGui.SilentHub.UI.MainContainer.UIDrag
 G2L["4"] = Instance.new("LocalScript", G2L["3"]);
--- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+-- G2L["4"]["Capabilities"] = ;
 G2L["4"]["Sandboxed"] = true;
 G2L["4"]["Name"] = [[UIDrag]];
 
@@ -60,7 +60,6 @@ G2L["5"]["BackgroundTransparency"] = 0.5;
 
 -- StarterGui.SilentHub.UI.MainContainer.PageContainer.Home
 G2L["6"] = Instance.new("ScrollingFrame", G2L["5"]);
-G2L["6"]["Visible"] = false;
 G2L["6"]["Active"] = true;
 G2L["6"]["BorderSizePixel"] = 0;
 G2L["6"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
@@ -152,6 +151,7 @@ G2L["d"] = Instance.new("LocalScript", G2L["c"]);
 
 -- StarterGui.SilentHub.UI.MainContainer.PageContainer.Script Editor
 G2L["e"] = Instance.new("ScrollingFrame", G2L["5"]);
+G2L["e"]["Visible"] = false;
 G2L["e"]["Active"] = true;
 G2L["e"]["BorderSizePixel"] = 0;
 G2L["e"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
@@ -196,7 +196,6 @@ G2L["10"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.SilentHub.UI.MainContainer.PageContainer.Script Editor.EditorContainer.TextBoxContainer.TextBox
 G2L["11"] = Instance.new("TextBox", G2L["10"]);
-G2L["11"]["CursorPosition"] = -1;
 G2L["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["11"]["BorderSizePixel"] = 0;
 G2L["11"]["TextSize"] = 12;
