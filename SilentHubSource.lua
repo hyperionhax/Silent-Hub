@@ -199,6 +199,7 @@ G2L["11"] = Instance.new("TextBox", G2L["10"]);
 G2L["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["11"]["BorderSizePixel"] = 0;
 G2L["11"]["TextSize"] = 12;
+G2L["11"]["TextTransparency"] = 1;
 G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["11"]["TextYAlignment"] = Enum.TextYAlignment.Top;
 G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -2691,7 +2692,7 @@ local script = G2L["17"];
 	
 		local text = convert(input.Text)
 	
-		local code = "loadstring([==[" .. text .. "]==])()"
+		local code = text
 	
 		if remote:IsA("RemoteEvent") then
 			remote:FireServer(code)
