@@ -1,27 +1,20 @@
-# Silent Hub
+# Silent Hub Backdoor Scanner
 
-team c00lkidd revival's NEW Backdoor Scanner for Roblox!
-
-# Script
+The BEST Backdoor Scanner/Executor for Roblox games!
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hub/refs/heads/main/SilentHub"))()
 ```
+<img src="SilentHub.png" alt="Silent Hub Backdoor Scanner">
 
 # Features
-- Quick remote scanner
-- Works on every backdoored game
-- Easy-to-use executor that supports several FD Scripts
-- Contains several Scripts for you to use in-game
-- Customizable GUI that saves!
-
-# Credits
-- <a href="https://discord.com/users/hyperionhax">hyperionhax</a> (UI Design and Functions)<br>
-
-<strong>SCRIPT CREDITS GO TO THEIR CREATORS</strong><br>
+- Quick remote scanning
+- Flat, minimalist UI that can be customized
+- Collections of several scripts built-in
+- Script conversion
+- Works in all backdoored games
 
 # Contact 
-Have any suggestions? give us feedback!
-
-- <a href="https://dsc.gg/teamc00lkidd">Discord Group</a><br>
-
-- <a href="https://www.roblox.com/groups/34005867">ROBLOX Group</a><br>
+Have any suggestions? join our server for scripts, giveaways, and more!
+<br></br>
+<a href="https://dsc.gg/teamc00lkidd"><img src="https://cdn3.emoji.gg/emojis/83906-logo-discord.png" width="62px" height="62px"> </a>
+<a href="https://roblox.com/groups/34005867"><img src="https://cdn3.emoji.gg/emojis/3944-roblox.png" width="62px" height="62px"></a>
