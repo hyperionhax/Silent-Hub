@@ -2816,12 +2816,8 @@ local script = G2L["1f"];
 	
 		local code = [[
 		local player = game.Players.]] .. game.Players.LocalPlayer.Name .. [[
-		local oldcframe = player.Character.HumanoidRootPart.CFrame
-		player.CharacterAppearanceId = 0
+		player.CharacterAppearanceId = player.UserId
 		player:LoadCharacter()
-		local character = player.Character or player.CharacterAdded:Wait()
-		local root = character:WaitForChild("HumanoidRootPart")
-		root.CFrame = oldcframe
 		]]
 	
 		if remote:IsA("RemoteEvent") then
@@ -3032,7 +3028,7 @@ local script = G2L["24"];
 			execute('require(110756170974672).killbot("' .. player .. '")')
 		end},
 		
-		{"Noot Noot [Server Killer]", function(button)
+		{"Noot Noot [Server Destruction]", function(button)
 			execute([[
 			
 				--no require here, just us chickens!
@@ -3167,7 +3163,7 @@ local script = G2L["24"];
 			execute('require(16756009191).mc("' .. player .. '")')
 		end},
 		
-		{"Toadroast [Server Killer]", function(button)
+		{"Toadroast [Server Destruction]", function(button)
 			execute('require(101923055217892).load()')
 		end},
 		
@@ -3175,7 +3171,7 @@ local script = G2L["24"];
 			execute('require(5195961797).eliza("' .. player .. '")')
 		end},
 		
-		{"c00lkiddify [Server Killer]", function(button)
+		{"c00lkiddify [Server Destruction]", function(button)
 			execute([[
 			id = 158118263
 	
@@ -3309,6 +3305,26 @@ local script = G2L["24"];
 		end
 			]])
 		end},
+		
+		{"Lua Hammer [R6]", function(button)
+			execute('require(11957419646):Fire("' .. player .. '", "lua")')
+		end},
+		
+		{"Memelord [R6]", function(button)
+			execute('require(6583586016).load("' .. player .. '")')
+		end},
+		
+		{"Captain Clark [Morph]", function(button)
+			execute('require(74425540128714).unseen("' .. player ..'")')
+		end},
+		
+		{"Demogorgon [Morph]", function(button)
+			execute('require(88346668038204).load("' .. player .. '")')
+		end},
+		
+		{"Roaring Knight [Morph]", function(button)
+			execute('require(71205239813237).Load("' .. player .. '")')
+		end},
 	}
 	
 	for _, item in ipairs(scripts) do
@@ -3432,6 +3448,22 @@ local script = G2L["2b"];
 		
 		{"SUGMA_V1", function(button)
 			execute([[require(11183244198):s('sugma', game.Players.]] .. player .. [[)]])
+		end},
+		
+		{"ExSer V4", function(button)
+			execute('require(0x4DD5D7D90D66)["MOD by 4N00N1M0"]("' .. player .. '")')
+		end},
+		
+		{"Sensation Hub", function(button)
+			execute([[require(82303184140990)("]] .. player .. [[")]])
+		end},
+		
+		{"Fumo Script Executor", function(button)
+			execute([[require(11387188264).fse("]] .. player .. [[")]])
+		end},
+		
+		{"Trash Hub", function(button)
+			execute([[require(17182254638)("]] .. player .. [[")]])
 		end},
 		
 	}
@@ -3599,16 +3631,20 @@ local script = G2L["32"];
 			execute('require(6763551855).map()')
 		end},
 		
-		{"Five Nights at Freddy's Map", function(button)
+		{"Five Nights at Freddy's", function(button)
 			execute('require(12070820190).fnaf1()')
 		end},
 		
-		{"SCP-3008 Map", function(button)
+		{"SCP-3008", function(button)
 			execute('require(9291437293).map()')
 		end},
 		
 		{"Escape Room", function(button)
 			execute('require(9442729068).escaperoom()')
+		end},
+		
+		{"Baldi's Basics", function(button)
+			execute('require(3160908861).school("' .. player .. '")')
 		end},
 	}
 	
