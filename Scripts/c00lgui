@@ -13507,7 +13507,7 @@ local button = Instance.new("TextButton")
 local s = Instance.new("Sky")
 s.Name = "Sky"
 s.Parent = game.Lighting
-local skyboxID = game.CoreGui.CoolGui.Frame.Settings.Page1["Skybox/Decal ID"].TextBox.Text
+local skyboxID = cka.Frame.Settings.Page1["Skybox/Decal ID"].TextBox.Text
 s.SkyboxBk = "http://www.roblox.com/asset/?id="..skyboxID
 s.SkyboxDn = "http://www.roblox.com/asset/?id="..skyboxID
 s.SkyboxFt = "http://www.roblox.com/asset/?id="..skyboxID
@@ -13566,7 +13566,7 @@ local button = Instance.new("TextButton")
 	button.Text = "Decal Spam"
 	button.TextColor3 = whit
 	button.MouseButton1Down:connect(function()
-		decalID = frame.Settings.Page1["Skybox/Decal ID"].TextBox.Text
+		decalID = cka.frame.Settings.Page1["Skybox/Decal ID"].TextBox.Text
 function exPro(root)
 for _, v in pairs(root:GetChildren()) do
 if v:IsA("Decal") and v.Texture ~= "http://www.roblox.com/asset/?id="..decalID then
