@@ -150,7 +150,9 @@ do
 	game,owner = FakeGame,FakeGame.Players.LocalPlayer
 end
 
-blak = Color3.new(0,0,0)
+----------------------------------------------------------------
+
+blak = Color3.new(20,20,20)
 rede = Color3.new(255/255,0/255,0/255)
 tef = "SourceSans"
 whit = Color3.new(255/255,255/255,255/255)
@@ -321,7 +323,7 @@ local title = Instance.new("TextLabel")
 	title.ZIndex = 2
 	title.Font = tef
 	title.FontSize = "Size24"
-	title.Text = "c00lgui Reborn Rc7 by v3rx"
+	title.Text = "c00lgui by team c00lkidd"
 	title.TextColor3 = whit
 --           inside pages        --
 local acg = Instance.new("Frame")
