@@ -2,7 +2,7 @@
 
 The BEST Backdoor Scanner/Executor for Roblox games!
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hub/refs/heads/main/SilentHub"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hub/main/SilentHub"))()
 ```
 <img src="SilentHub.png" alt="Silent Hub Backdoor Scanner">
 
