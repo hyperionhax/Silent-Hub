@@ -370,8 +370,8 @@ wait()
 if char:FindFirstChild("Head") then
 	We(Hat1,char.Head,0,0.25,-0.135,0,0,0)
 	We(Hat2,char.Head,0,0.8,0,0,0,0)
-	if char.head:FindFirstChild("face") ~= nil then
-		face = char.head:FindFirstChild("face")
+	if char.Head:FindFirstChild("face") ~= nil then
+		face = char.Head:FindFirstChild("face")
 		face.Texture = "rbxasset://textures/face.png"
 	end
 	c=char.Head:clone()
