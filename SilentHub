@@ -26,7 +26,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 	})
 else
 _G.SilentHub = {
-    Log = true
+    Log = true,
 	SkipIntro = false
 }
 
