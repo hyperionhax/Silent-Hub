@@ -7,11 +7,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/Silent-Hu
 <img src="image.png" alt="Silent Hub Backdoor Scanner">
 
 # Features
-- Quick remote scanning
-- Flat, minimalist UI that can be customized
-- Collections of several scripts built-in
-- Script conversion
-- Works in all backdoored games
+- Flat, customizable UI
+- Built-in Script Hub
+- Script Conversion
 
 # Contact 
 Have any suggestions? join our server for scripts, giveaways, and more!
